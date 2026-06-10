@@ -1,0 +1,338 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #191919;
+    scroll-behavior: smooth;
+}
+
+/* Header & Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #f0f0f0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.logo span {
+    color: #000000;
+}
+
+nav a {
+    text-decoration: none;
+    color: #666666;
+    font-weight: 600;
+    font-size: 14px;
+    margin-left: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #000000;
+}
+
+/* Section Headings Layout */
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h3 {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+.section-title .line {
+    width: 60px;
+    height: 4px;
+    background-color: #000000;
+    margin: 0 auto;
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    padding: 60px 8%;
+    /* Swapped flat white/gray for a clean dark-to-light gradient blend */
+    background: linear-gradient(135deg, #111111 0%, #1c1c1c 40%, #f9f9f9 100%);
+    position: relative;
+}
+
+/* Adjusted typography colors so they remain highly legible against the dark shade */
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    color: #ffffff; /* Turned white */
+}
+
+.hero-text h1 span {
+    border-bottom: 4px solid #ffffff; /* Border turned white */
+}
+
+.hero-text h2 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #cccccc; /* Softened gray for readability */
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero-text p {
+    max-width: 650px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #e0e0e0; /* Brightened text to contrast with the dark backdrop */
+    margin-bottom: 30px;
+}
+
+.social-icons a {
+    color: #ffffff; /* Icons turned white */
+    font-size: 22px;
+    margin-right: 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+    color: #cccccc;
+}
+
+/* Skills Section */
+.skills-section {
+    padding: 100px 8%;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.skill-card {
+    text-align: center;
+    padding: 30px 20px;
+    background: #ffffff;
+    border: 1px solid #eaeaea;
+    border-top: 4px solid #191919;
+    transition: box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.skill-icon {
+    font-size: 36px;
+    color: #191919;
+    margin-bottom: 15px;
+}
+
+.skill-icon .div-icon {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 28px;
+}
+
+.skill-card h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.skill-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666666;
+}
+
+/* Portfolio Gallery Section */
+.portfolio-section {
+    padding: 100px 8%;
+    background-color: #f9f9f9;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.portfolio-item {
+    background: #191919;
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* Minimalist dark placeholders following the Figma style */
+.portfolio-item:nth-child(1) { background: linear-gradient(135deg, #111, #333); }
+.portfolio-item:nth-child(2) { background: linear-gradient(135deg, #222, #444); }
+.portfolio-item:nth-child(3) { background: linear-gradient(135deg, #1a1a1a, #2b2b2b); }
+
+.item-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.85));
+    color: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.item-overlay h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.item-overlay p {
+    font-size: 13px;
+    color: #cccccc;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Contact Section Form */
+.contact-section {
+    padding: 100px 8%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact-subtitle {
+    text-align: center;
+    color: #666666;
+    margin-bottom: 40px;
+    font-size: 15px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 15px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #e0e0e0;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #000000;
+}
+
+.submit-btn {
+    align-self: center;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 15px 50px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #333333;
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #191919;
+    color: #ffffff;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES (Responsive Design Breakpoints)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    nav a {
+        margin: 0 10px;
+        font-size: 12px;
+    }
+
+    .hero-section {
+        padding: 60px 5%;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 36px;
+    }
+
+    .hero-text p {
+        margin: 0 auto 30px auto;
+    }
+
+    .skills-section, .portfolio-section, .contact-section {
+        padding: 60px 5%;
+    }
+}
+.contact-info {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #030303;
+}
+
+.contact-info i {
+    color: #020303;
+    margin-right: 10px;
+}
